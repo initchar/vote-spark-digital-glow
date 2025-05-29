@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
@@ -84,9 +85,12 @@ const Nominee = () => {
                 {/* Vote section */}
                 <div className="lg:col-span-1">
                   <div className="bg-hot-navy rounded-lg p-6">
-                    <button className="w-full bg-hot-pink text-white font-bold text-lg py-4 rounded-lg hover:bg-hot-pink/90 transition-colors mb-6">
+                    <Link 
+                      to={`/vote/${id}`}
+                      className="w-full bg-hot-pink text-white font-bold text-lg py-4 rounded-lg hover:bg-hot-pink/90 transition-colors mb-6 block text-center"
+                    >
                       Vote
-                    </button>
+                    </Link>
                     
                     <p className="text-white text-sm font-normal mb-4">Get others voting for {nominee.name.split(' ')[0]} {nominee.name.split(' ')[nominee.name.split(' ').length - 1]}</p>
                     
