@@ -21,12 +21,12 @@ const NomineeCard = ({ name, title, hasPhoto = true }: NomineeCardProps) => {
             <div className="w-full h-full bg-gray-500"></div>
           ) : (
             <div className="w-full h-full bg-gray-600 flex items-center justify-center">
-              <User className="w-12 h-12 text-white" />
+              <User className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
             </div>
           )}
         </div>
-        <div className="p-4 h-32 flex flex-col">
-          <h3 className="text-hot-yellow font-bold text-sm mb-2 leading-tight line-clamp-3 overflow-hidden">{name}</h3>
+        <div className="p-3 sm:p-4 flex flex-col">
+          <h3 className="text-hot-yellow font-bold text-xs sm:text-sm mb-2 leading-tight line-clamp-3 overflow-hidden">{name}</h3>
           <p className="text-white text-xs font-normal leading-tight line-clamp-2 overflow-hidden flex-1">{title}</p>
         </div>
       </div>
