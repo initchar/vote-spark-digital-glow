@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { RefreshCcw } from 'lucide-react';
 import Header from '../components/Header';
 import NomineeCard from '../components/NomineeCard';
@@ -27,7 +28,7 @@ const CastVotePage = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-hot-yellow mb-4 sm:mb-6">Cast Your Vote</h1>
           <p className="text-white text-base sm:text-lg font-normal mb-6 sm:mb-8 max-w-2xl mx-auto">
             Explore samples of current nominees or type a name in the search box to find someone specific. 
-            If the person you'd like to vote for isn't listed, <span className="text-hot-pink font-medium">nominate someone new</span>.
+            If the person you'd like to vote for isn't listed, <Link to="/nominate" className="text-hot-pink font-medium hover:underline">nominate someone new</Link>.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-md mx-auto">
             <input 
@@ -62,9 +63,9 @@ const CastVotePage = () => {
             Reshuffle sample
           </button>
           <div>
-            <button className="bg-hot-cyan text-black px-6 py-3 sm:px-8 sm:py-4 font-bold text-base sm:text-lg rounded-lg hover:bg-hot-cyan/90 transition-colors">
+            <Link to="/nominate" className="inline-block bg-hot-cyan text-black px-6 py-3 sm:px-8 sm:py-4 font-bold text-base sm:text-lg rounded-lg hover:bg-hot-cyan/90 transition-colors">
               Nominate someone new
-            </button>
+            </Link>
           </div>
         </div>
       </main>
