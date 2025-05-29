@@ -16,18 +16,18 @@ const NomineeCard = ({ name, title, hasPhoto = true }: NomineeCardProps) => {
   return (
     <Link to={`/nominee/${nomineeId}`} className="block">
       <div className="bg-hot-navy rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-hot-cyan/20 hover:-translate-y-2">
-        <div className="aspect-[3/4] bg-gray-500 flex items-center justify-center">
+        <div className="aspect-square bg-gray-500 flex items-center justify-center">
           {hasPhoto ? (
             <div className="w-full h-full bg-gray-500"></div>
           ) : (
             <div className="w-full h-full bg-gray-600 flex items-center justify-center">
-              <User className="w-16 h-16 text-white" />
+              <User className="w-12 h-12 text-white" />
             </div>
           )}
         </div>
-        <div className="p-4">
-          <h3 className="text-hot-yellow font-bold text-lg mb-2">{name}</h3>
-          <p className="text-white text-sm">{title}</p>
+        <div className="p-4 h-32 flex flex-col">
+          <h3 className="text-hot-yellow font-bold text-sm mb-2 leading-tight line-clamp-3 overflow-hidden">{name}</h3>
+          <p className="text-white text-xs leading-tight line-clamp-2 overflow-hidden flex-1">{title}</p>
         </div>
       </div>
     </Link>
