@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'roboto': ['Roboto', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Hot 100 custom colors
+				'hot-bg': '#0b0b0b',
+				'hot-navy': '#002b49',
+				'hot-cyan': '#00f5c3',
+				'hot-yellow': '#fff500',
+				'hot-pink': '#ff0055',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
