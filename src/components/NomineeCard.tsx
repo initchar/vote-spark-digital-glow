@@ -27,7 +27,7 @@ const NomineeCard = ({ name, title, hasPhoto = true }: NomineeCardProps) => {
         </div>
         <div className="p-4 h-32 flex flex-col">
           <h3 className="text-hot-yellow font-bold text-sm mb-2 leading-tight line-clamp-3 overflow-hidden">{name}</h3>
-          <p className="text-white text-xs leading-tight line-clamp-2 overflow-hidden flex-1">{title}</p>
+          <p className="text-white text-xs font-normal leading-tight line-clamp-2 overflow-hidden flex-1">{title}</p>
         </div>
       </div>
     </Link>

@@ -18,22 +18,22 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-hot-bg font-roboto">
+    <div className="min-h-screen bg-hot-bg font-figtree">
       <Header />
       
       {/* Main Content - Title & Search */}
       <main className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-6 text-center mb-16">
-          <h1 className="text-6xl font-bold text-hot-yellow mb-6">Cast Your Vote</h1>
-          <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
+          <h1 className="text-6xl font-black text-hot-yellow mb-6">Cast Your Vote</h1>
+          <p className="text-white text-lg font-normal mb-8 max-w-2xl mx-auto">
             Explore samples of current nominees or type a name in the search box to find someone specific. 
-            If the person you'd like to vote for isn't listed, <span className="text-hot-pink">nominate someone new</span>.
+            If the person you'd like to vote for isn't listed, <span className="text-hot-pink font-medium">nominate someone new</span>.
           </p>
           <div className="flex justify-center items-center gap-4 max-w-md mx-auto">
             <input 
               type="text" 
               placeholder="Search nominees..." 
-              className="flex-1 bg-gray-700 text-white px-4 py-3 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-hot-cyan"
+              className="flex-1 bg-gray-700 text-white px-4 py-3 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-hot-cyan font-normal"
             />
             <button className="bg-hot-cyan text-black px-6 py-3 font-bold rounded-lg hover:bg-hot-cyan/90 transition-colors">
               Search
@@ -57,7 +57,7 @@ const Index = () => {
 
         {/* Action Buttons */}
         <div className="max-w-4xl mx-auto px-6 text-center space-y-4">
-          <button className="inline-flex items-center gap-2 text-hot-pink border-2 border-hot-pink px-6 py-3 rounded-lg font-medium hover:bg-hot-pink/10 transition-colors">
+          <button className="inline-flex items-center gap-2 text-hot-pink border-2 border-hot-pink px-6 py-3 rounded-lg font-semibold hover:bg-hot-pink/10 transition-colors">
             <RefreshCcw className="w-5 h-5" />
             Reshuffle sample
           </button>

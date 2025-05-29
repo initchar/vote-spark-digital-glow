@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
@@ -29,7 +28,7 @@ const Nominee = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-hot-bg font-roboto">
+    <div className="min-h-screen bg-hot-bg font-figtree">
       <Header />
       
       <main className="pt-24 pb-16">
@@ -37,7 +36,7 @@ const Nominee = () => {
           {/* Back to nominee list */}
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-hot-cyan mb-8 hover:text-hot-cyan/80 transition-colors"
+            className="inline-flex items-center gap-2 text-hot-cyan font-medium mb-8 hover:text-hot-cyan/80 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             Back to nominee list
@@ -60,21 +59,21 @@ const Nominee = () => {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Nominee details */}
                 <div className="lg:col-span-2">
-                  <h1 className="text-4xl font-bold text-white mb-2">{nominee.name}</h1>
-                  <p className="text-hot-cyan text-lg mb-1">{nominee.title}</p>
-                  <p className="text-hot-cyan text-lg mb-6">{nominee.company}</p>
+                  <h1 className="text-4xl font-black text-white mb-2">{nominee.name}</h1>
+                  <p className="text-hot-cyan text-lg font-semibold mb-1">{nominee.title}</p>
+                  <p className="text-hot-cyan text-lg font-semibold mb-6">{nominee.company}</p>
                   
                   <div className="mb-6">
-                    <p className="text-gray-300 text-lg leading-relaxed">"{nominee.description}"</p>
+                    <p className="text-gray-300 text-lg font-normal leading-relaxed">"{nominee.description}"</p>
                   </div>
 
                   <div className="border-t border-gray-600 pt-6">
-                    <p className="text-white mb-2">Website(s):</p>
+                    <p className="text-white font-medium mb-2">Website(s):</p>
                     <a 
                       href={nominee.website} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-hot-cyan hover:text-hot-cyan/80 transition-colors inline-flex items-center gap-2"
+                      className="text-hot-cyan font-medium hover:text-hot-cyan/80 transition-colors inline-flex items-center gap-2"
                     >
                       {nominee.website}
                       <ExternalLink className="w-4 h-4" />
@@ -89,7 +88,7 @@ const Nominee = () => {
                       Vote
                     </button>
                     
-                    <p className="text-white text-sm mb-4">Get others voting for {nominee.name.split(' ')[0]} {nominee.name.split(' ')[nominee.name.split(' ').length - 1]}</p>
+                    <p className="text-white text-sm font-normal mb-4">Get others voting for {nominee.name.split(' ')[0]} {nominee.name.split(' ')[nominee.name.split(' ').length - 1]}</p>
                     
                     <div className="flex gap-3 mb-6">
                       <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
@@ -104,8 +103,8 @@ const Nominee = () => {
                     </div>
                     
                     <div className="border-t border-gray-600 pt-4">
-                      <p className="text-white text-sm mb-2">Are these details out of date?</p>
-                      <a href="#" className="text-hot-cyan text-sm hover:text-hot-cyan/80 transition-colors">
+                      <p className="text-white text-sm font-normal mb-2">Are these details out of date?</p>
+                      <a href="#" className="text-hot-cyan text-sm font-medium hover:text-hot-cyan/80 transition-colors">
                         Please let us know.
                       </a>
                     </div>

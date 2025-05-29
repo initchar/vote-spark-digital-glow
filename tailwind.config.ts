@@ -19,7 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'roboto': ['Roboto', 'sans-serif'],
+				'figtree': ['Figtree', 'sans-serif'],
+				'sans': ['Figtree', 'sans-serif'], // Make Figtree the default sans font
 			},
 			colors: {
 				border: 'hsl(var(--border))',
